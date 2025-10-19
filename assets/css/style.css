@@ -1,0 +1,30 @@
+/* General Body Styles */
+body {
+    padding-top: 56px; /* Adjust body padding to prevent content from being hidden by the fixed navbar */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center; /* Replace with a high-quality photo of your car or team */
+    background-size: cover;
+    height: 60vh; /* Viewport height - adjust as needed */
+    position: relative;
+    color: white;
+}
+
+/* Add a dark overlay to make text readable */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Make hero content appear above the overlay */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
